@@ -16,7 +16,7 @@ function Card(props) {
           className={"card-primary__text-item card-primary__text-item--gray"}
           href="/"
         >
-          {country}, {city}
+          {city}, {country}
         </a>
       </div>
     </div>
