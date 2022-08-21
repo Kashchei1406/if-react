@@ -3,8 +3,7 @@ import Card from "../Card/Card";
 import Title from "../Title/Title";
 import data from "../../constants/data";
 import "../../assets/styles/style.css";
-import ButtonNext from "../Buttons/ButtonNext";
-import ButtonPrev from "../Buttons/ButtonPrev";
+import CarouselBtn from "../Buttons/Carousel-btn";
 
 function GuestsLove() {
   return (
@@ -25,8 +24,11 @@ function GuestsLove() {
               ))}
             </div>
           </div>
-          <ButtonPrev />
-          <ButtonNext />
+          <CarouselBtn
+            classes={"btn--prev _invisible"}
+            id={"guests-love__btn--prev"}
+          />
+          <CarouselBtn classes={"btn--next"} id={"guests-love__btn--next"} />
         </div>
       </div>
     </section>

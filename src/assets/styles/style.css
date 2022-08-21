@@ -151,7 +151,7 @@ a {
   transition: all ease 0.3s;
 }
 
-.carousel__btn img{
+.carousel__img-btn{
   width: 50%;
 }
 
@@ -178,7 +178,7 @@ inset -5px 0 2px rgba(255, 255, 255, 0.3);
 }
 
 
-.carousel__btn-img--prev{
+.carousel__img-btn--prev{
   transform: rotate(90deg);
 }
 
@@ -189,7 +189,7 @@ inset -5px 0 2px rgba(255, 255, 255, 0.3);
   transform: translate(50%, 50%)
 }
 
-.carousel__btn-img--next{
+.carousel__img-btn--next{
   transform: rotate(-90deg);
 }
 
