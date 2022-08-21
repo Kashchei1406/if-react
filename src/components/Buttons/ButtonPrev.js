@@ -9,7 +9,7 @@ function ButtonPrev() {
     >
       <img
         className="carousel__btn-img carousel__btn-img--prev"
-        src="../../images/arrow.svg"
+        src="../../assets/images/arrow.svg"
         alt="arrow"
       />
     </button>

@@ -9,7 +9,7 @@ function ButtonNext() {
     >
       <img
         className="carousel__btn-img carousel__btn-img--next"
-        src="../../images/arrow.png"
+        src="../../assets/images/arrow.svg"
         alt="arrow"
       />
     </button>

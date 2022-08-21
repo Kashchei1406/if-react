@@ -1,10 +1,10 @@
 import React from "react";
-import Card from "../card/Card";
-import Title from "../title/Title";
-import data from "../../js/data";
-import "../../styles/style.css";
-import ButtonNext from "../buttons/ButtonNext";
-import ButtonPrev from "../buttons/ButtonPrev";
+import Card from "../Card/Card";
+import Title from "../Title/Title";
+import data from "../../constants/data";
+import "../../assets/styles/style.css";
+import ButtonNext from "../Buttons/ButtonNext";
+import ButtonPrev from "../Buttons/ButtonPrev";
 
 function GuestsLove() {
   return (
