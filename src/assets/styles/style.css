@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.col-1 {
+  width: calc((100% / 12) * 1 - 16px);
+}
+
+.col-2 {
+  width: calc((100% / 12) * 2 - 16px);
+}
+
+.col-3 {
+  width: calc((100% / 12) * 3 - 16px);
+}
+
+.col-4 {
+  width: calc((100% / 12) * 4 - 16px);
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+a,
+button,
+.btn,
+label,
+input,
+select,
+h1,
+h2 {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1266px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.title {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.title__item {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.title__item::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: #f5bd41;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.title__item:hover:after {
+  width: 100px;
+}
+
+.row-container {
+  margin: 84px 0 120px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.guests-loves {
+  width: 100%;
+  background-color: #eaf0f9;
+  overflow: hidden;
+}
+
+.card-primary {
+  margin: 0 8px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.card-primary__img-wrapper {
+  max-height: 300px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-primary__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-primary__text-item {
+  display: block;
+  padding-top: 24px;
+  font-size: 24px;
+  color: #3077c6;
+}
+
+.card-primary__text-item--gray {
+  color: #bfbfbf;
+}
+
+.carousel{
+  position: relative;
+}
+
+.carousel__btn{
+  border: none;
+  background-color: #F3F3F4;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 32%;
+  transition: all ease 0.3s;
+}
+
+.carousel__img-btn{
+  width: 50%;
+}
+
+.carousel__btn--prev {
+  right: 100%;
+  box-shadow: -4px 0 5px rgba(0, 0, 0, 0.3),
+  inset 4px 0 2px rgba(255, 255, 255, 0.3);
+  transform: translate(50%, 50%);
+}
+
+.carousel__btn:hover{
+  width: 42px;
+  height: 42px;
+}
+
+.carousel__btn--prev:hover {
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3),
+  inset 5px 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.carousel__btn--next:hover{
+  right: 0;  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.3),
+inset -5px 0 2px rgba(255, 255, 255, 0.3);
+}
+
+
+.carousel__img-btn--prev{
+  transform: rotate(90deg);
+}
+
+.carousel__btn--next{
+  right: 0;
+  box-shadow: 4px 0 5px rgba(0, 0, 0, 0.3),
+  inset -4px 0 2px rgba(255, 255, 255, 0.3);
+  transform: translate(50%, 50%)
+}
+
+.carousel__img-btn--next{
+  transform: rotate(-90deg);
+}
+
+._invisible{
+  display: none;
+  opacity: 0;
+}
+
+@media screen and (max-width: 1232px) {
+  .card-primary__img-wrapper {
+   height: 235px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-md-12 {
+    width: 100%;
+  }
+
+  .col-md-6 {
+    width: calc((100% / 12) * 6 - 16px);
+  }
+
+  .guests-loves{
+    justify-content: start;
+  }
+
+  .title {
+    margin-top: 24px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .guests-loves {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col-sm-6 {
+    width: 100%;
+  }
+
+  .row-container {
+    margin: 32px 0 40px;
+  }
+
+  .guests-loves {
+    min-width: 360px;
+  }
+
+  .title {
+    padding: 0;
+  }
+
+  .title__item {
+    font-size: 28px;
+  }
+
+  .title__item::after {
+    display: none;
+  }
+
+  .row-container {
+    justify-content: center;
+  }
+
+  .card-primary__img-wrapper {
+    max-height: 156px;
+  }
+
+  .card-primary__text-item {
+    font-size: 12px;
+  }
+
+  .card-primary__text-item--gray {
+    padding: 4px;
+  }
+
+  .row-container {
+    justify-content: space-around;
+  }
+
+}
