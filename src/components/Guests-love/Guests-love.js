@@ -3,11 +3,12 @@ import Card from "../Card/Card";
 import Title from "../Title/Title";
 import data from "../../constants/data";
 import CarouselBtn from "../Buttons/Carousel-btn";
+import Container from "../Container/Container";
 
 function GuestsLove() {
   return (
     <section className={"guests-loves"}>
-      <div className={"container"}>
+      <Container>
         <Title name={"Home guests Love"} />
         <div className={"carousel"}>
           <div className={"carousel__container"}>
@@ -29,7 +30,7 @@ function GuestsLove() {
           />
           <CarouselBtn classes={"btn--next"} id={"guests-love__btn--next"} />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

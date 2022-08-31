@@ -9,7 +9,7 @@ function CarouselBtn({ classes, id }) {
     >
       <img
         className={`carousel__img-btn carousel__img-${classes}`}
-        src="../../assets/images/arrow.svg"
+        src="./images/arrow.svg"
         alt="arrow"
       />
     </button>

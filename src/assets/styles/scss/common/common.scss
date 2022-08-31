@@ -1,3 +1,16 @@
+@use "variables" as var;
+@use "extends" as *;
+
+body {
+  margin: 0;
+  @extend %font-normal;
+}
+
+a {
+  text-decoration: none;
+  color: var.$primary-color-white;
+}
+
 .col-1 {
   width: calc((100% / 12) * 1 - 16px);
 }
@@ -15,7 +28,7 @@
 }
 
 .col-6 {
-  width: 50%;
+  width: calc((100% / 12) * 6 - 16px);
 }
 
 .col-12 {
@@ -31,9 +44,4 @@ select,
 h1,
 h2 {
   cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: #ffffff;
 }
