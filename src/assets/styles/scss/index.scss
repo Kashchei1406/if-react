@@ -1,7 +1,6 @@
-@import '../fonts.css';
-@import 'common';
+@import "../fonts.css";
+@import "common";
 @import "reset";
-
 
 body {
   margin: 0;
@@ -97,13 +96,13 @@ a {
   color: #bfbfbf;
 }
 
-.carousel{
+.carousel {
   position: relative;
 }
 
-.carousel__btn{
+.carousel__btn {
   border: none;
-  background-color: #F3F3F4;
+  background-color: #f3f3f4;
   border-radius: 40px;
   width: 40px;
   height: 40px;
@@ -115,49 +114,49 @@ a {
   transition: all ease 0.3s;
 }
 
-.carousel__btn img{
+.carousel__btn img {
   width: 50%;
 }
 
 .carousel__btn--prev {
   right: 100%;
   box-shadow: -4px 0 5px rgba(0, 0, 0, 0.3),
-  inset 4px 0 2px rgba(255, 255, 255, 0.3);
+    inset 4px 0 2px rgba(255, 255, 255, 0.3);
   transform: translate(50%, 50%);
 }
 
-.carousel__btn:hover{
+.carousel__btn:hover {
   width: 42px;
   height: 42px;
 }
 
 .carousel__btn--prev:hover {
   box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3),
-  inset 5px 0 2px rgba(255, 255, 255, 0.3);
+    inset 5px 0 2px rgba(255, 255, 255, 0.3);
 }
 
-.carousel__btn--next:hover{
-  right: 0;  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.3),
-inset -5px 0 2px rgba(255, 255, 255, 0.3);
+.carousel__btn--next:hover {
+  right: 0;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.3),
+    inset -5px 0 2px rgba(255, 255, 255, 0.3);
 }
 
-
-.carousel__btn-img--prev{
+.carousel__img-btn--prev {
   transform: rotate(90deg);
 }
 
-.carousel__btn--next{
+.carousel__btn--next {
   right: 0;
   box-shadow: 4px 0 5px rgba(0, 0, 0, 0.3),
-  inset -4px 0 2px rgba(255, 255, 255, 0.3);
-  transform: translate(50%, 50%)
+    inset -4px 0 2px rgba(255, 255, 255, 0.3);
+  transform: translate(50%, 50%);
 }
 
-.carousel__btn-img--next{
+.carousel__img-btn--next {
   transform: rotate(-90deg);
 }
 
-._invisible{
+._invisible {
   display: none;
   opacity: 0;
 }
@@ -177,14 +176,13 @@ inset -5px 0 2px rgba(255, 255, 255, 0.3);
     width: calc((100% / 12) * 6 - 16px);
   }
 
-  .guests-loves{
+  .guests-loves {
     justify-content: start;
   }
 
   .title {
     margin-top: 24px;
   }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -237,5 +235,4 @@ inset -5px 0 2px rgba(255, 255, 255, 0.3);
   .row-container {
     justify-content: space-around;
   }
-
 }
