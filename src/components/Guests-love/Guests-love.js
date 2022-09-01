@@ -2,7 +2,6 @@ import React from "react";
 import Card from "../Card/Card";
 import Title from "../Title/Title";
 import data from "../../constants/data";
-import "../../assets/styles/style.css";
 import CarouselBtn from "../Buttons/Carousel-btn";
 
 function GuestsLove() {

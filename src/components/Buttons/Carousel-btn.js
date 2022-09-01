@@ -1,4 +1,5 @@
 import React from "react";
+import arrow from "../../assets/images/arrow.svg";
 
 function CarouselBtn({ classes, id }) {
   return (
@@ -9,7 +10,7 @@ function CarouselBtn({ classes, id }) {
     >
       <img
         className={`carousel__img-btn carousel__img-${classes}`}
-        src="../../../public/images/arrow.svg"
+        src={arrow}
         alt="arrow"
       />
     </button>
