@@ -11,3 +11,12 @@ a {
 li {
   list-style: none;
 }
+
+input:hover, input:focus{
+  border: none
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}

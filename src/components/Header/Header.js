@@ -1,43 +1,62 @@
 import React from "react";
 import Container from "../Container/Container";
-import "../../assets/styles/scss/common/common.scss";
+import background from "../../assets/images/background.png";
+import icons from "../../assets/images/icons.svg";
+import googleApp from "../../assets/images/google.svg";
+import appStore from "../../assets/images/apple.svg";
+import SearchForm from "../SearchForm/SearchForm";
 
 function Header() {
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={{ backgroundImage: `url(${background})` }}
+    >
       <Container>
         <div className="header__head col-12">
-          <div className="col-1">
-            <svg className="header__logo">
-              <use href="./images/icons.svg#logo" />
-            </svg>
-          </div>
+          <svg className="header__logo col-2">
+            <use href={`${icons}#logo`} />
+          </svg>
           <ul className="nav">
-            <li className="nav__item">
+            <li className="nav__item nav__item--txt">
               <a className="nav__link" href="/">
                 Stays
               </a>
             </li>
-            <li className="nav__item">
+            <li className="nav__item  nav__item--txt">
               <a className="nav__link" href="/">
                 Attraction
               </a>
             </li>
-            <li className="nav__item">
-              <a className="nav__link" href="/">
-                <svg className="nav__item-night">
-                  <use href="./images/icons.svg#night" />
+            <li className="nav__item nav__item--svg">
+              <a className="nav__link nav__link--svg" href="/">
+                <svg className="nav__item-night nav__svg">
+                  <use href={`${icons}#night`} />
                 </svg>
               </a>
             </li>
-            <li className="nav__item">
-              <a className="nav__link" href="/">
-                <svg className="nav__item-account">
-                  <use href="./images/icons.svg#account" />
+            <li className="nav__item nav__item--svg">
+              <a className="nav__link nav__link--svg" href="/">
+                <svg className="nav__item-account nav__svg">
+                  <use href={`${icons}#account`} />
                 </svg>
               </a>
             </li>
           </ul>
+        </div>
+        <h1 className="header__title col-12">
+          Discover stays
+          <br />
+          to live, work or just relax
+        </h1>
+        <SearchForm />
+        <div className="header__apps col-12">
+          <div className="header__apps-item">
+            <img src={googleApp} alt="Logo Google store" />
+          </div>
+          <div className="header__apps-item">
+            <img src={appStore} alt="Logo App store" />
+          </div>
         </div>
       </Container>
     </header>

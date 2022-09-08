@@ -12,11 +12,11 @@ a {
 }
 
 .col-1 {
-  width: calc((100% / 12) * 1 - 16px);
+  width: calc((100% / 12) * 1);
 }
 
 .col-2 {
-  width: calc((100% / 12) * 2 - 16px);
+  width: calc((100% / 12) * 2);
 }
 
 .col-3 {
@@ -28,7 +28,7 @@ a {
 }
 
 .col-6 {
-  width: calc((100% / 12) * 6 - 16px);
+  width: calc((100% / 12) * 6);
 }
 
 .col-12 {
