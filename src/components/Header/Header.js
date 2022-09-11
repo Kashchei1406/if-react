@@ -12,11 +12,16 @@ function Header() {
   const [result, setResult] = useState([]);
 
   const filterResult = (country) => {
-    setResult(
-      data.filter((item) =>
-        item.country.toLowerCase().includes(country.toLowerCase())
-      )
-    );
+    if (country) {
+      setResult(
+        data.filter(
+          (item) =>
+            item.country.toLowerCase().includes(country.toLowerCase()) ||
+            item.name.toLowerCase().includes(country.toLowerCase())
+        )
+      );
+      !!result.length && alert("Sorry, we can`t find this place, try again");
+    }
   };
 
   return (
@@ -73,7 +78,13 @@ function Header() {
           </div>
         </Container>
       </header>
-      {!!result.length && <MainSection title="Availabel Hotel" data={result} />}
+      {!!result.length && (
+        <MainSection
+          title="Available Hotel"
+          data={result}
+          classes="available-hotels"
+        />
+      )}
     </>
   );
 }

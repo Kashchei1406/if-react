@@ -195,6 +195,10 @@
   margin: 0 8px;
 }
 
+.available-hotels{
+  background-color: $primary-color-white;
+}
+
 .container {
   @extend %flex-column;
   max-width: $max-width;
