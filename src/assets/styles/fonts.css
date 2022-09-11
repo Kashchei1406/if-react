@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "roboto";
+  font-family: "Roboto";
   src: local("roboto"), local("Roboto"),
     url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"),
     url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: "roboto";
+  font-family: "Roboto";
   src: local("roboto"), local("Roboto"),
     url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"),
     url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");

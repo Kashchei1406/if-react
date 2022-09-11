@@ -1,0 +1,29 @@
+@use "variables" as var;
+%font-normal{
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+%font-bold{
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+%flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

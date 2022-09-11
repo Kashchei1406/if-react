@@ -1,0 +1,51 @@
+@use "variables" as var;
+@use "extends" as *;
+
+body {
+  margin: 0;
+  @extend %font-normal;
+}
+
+a {
+  text-decoration: none;
+  color: var.$primary-color-white;
+}
+
+.col-1 {
+  width: calc((100% / 12) * 1);
+}
+
+.col-2 {
+  width: calc((100% / 12) * 2);
+}
+
+.col-3 {
+  width: calc((100% / 12) * 3 - 16px);
+}
+
+.col-4 {
+  width: calc((100% / 12) * 4 - 16px);
+}
+
+.col-6 {
+  width: calc((100% / 12) * 6);
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.hide{
+  display: none;
+}
+
+a,
+button,
+.btn,
+label,
+input,
+select,
+h1,
+h2 {
+  cursor: pointer;
+}
