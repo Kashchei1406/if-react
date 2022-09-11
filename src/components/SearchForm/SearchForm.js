@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-function SearchForm() {
+function SearchForm({ getCountry }) {
+  const [country, setCountry] = useState("");
+
+  const searchCountry = (event) => {
+    event.preventDefault();
+    getCountry(country);
+    setCountry("");
+  };
+
   return (
     <form className="form col-12" id="main-form" method="GET">
       <div className="form__item form__item-hotel">
@@ -8,6 +16,8 @@ function SearchForm() {
           Your destination or hotel name
         </span>
         <input
+          value={country}
+          onChange={(e) => setCountry(e.target.value)}
           id="input-hotel"
           className="form__input-txt"
           type="text"
@@ -39,7 +49,7 @@ function SearchForm() {
         </p>
       </div>
       <div className="form__btn-wrapper">
-        <button className="form__btn" type="button">
+        <button className="form__btn" type="button" onClick={searchCountry}>
           Search
         </button>
       </div>

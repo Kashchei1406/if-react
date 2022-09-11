@@ -121,7 +121,7 @@
   border: none;
   height: 50px;
   margin-left: 24px;
-  width: 100% -24px;
+  width: 90%;
 
   &::placeholder {
     font-size: $font-size-normal;
@@ -138,12 +138,10 @@
 }
 
 .form__date {
+  @extend %flex-center;
   height: 64px;
   color: $primary-text-color;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .form__label-date {
@@ -159,11 +157,9 @@
 }
 
 .form__item-amount {
+  @extend %flex-center;
   margin-left: 4px;
   width: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .form__item-amount p {
@@ -171,17 +167,15 @@
 }
 
 .form__btn-wrapper {
+  @extend %flex-center;
   position: relative;
   width: 17%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .form__btn {
+  @include font-bold($font-size-big-resp, $primary-color-white);
   position: absolute;
   left: 3px;
-  @include font-bold($font-size-big-resp, $primary-color-white);
   background-color: $primary-color-blue;
   width: 100%;
   height: 64px;
@@ -209,8 +203,8 @@
 }
 
 .title {
-  margin-top: 120px;
   @extend %flex-column;
+  margin-top: 120px;
   align-items: center;
   position: relative;
 }
@@ -251,8 +245,8 @@
 }
 
 .card-primary {
-  margin: 0 8px;
   @extend %flex-column;
+  margin: 0 8px;
   flex-shrink: 0;
 }
 
@@ -269,9 +263,9 @@
 }
 
 .card-primary__text-item {
+  @include font-normal($font-size-big, $primary-color-blue);
   display: block;
   padding-top: 24px;
-  @include font-normal($font-size-big, $primary-color-blue);
 }
 
 .card-primary__text-item--gray {
