@@ -13,14 +13,13 @@ function Header() {
 
   const filterResult = (country) => {
     if (country) {
-      setResult(
-        data.filter(
-          (item) =>
-            item.country.toLowerCase().includes(country.toLowerCase()) ||
-            item.name.toLowerCase().includes(country.toLowerCase())
-        )
+      const filteredHotels = data.filter(
+        (item) =>
+          item.country.toLowerCase().includes(country.toLowerCase()) ||
+          item.name.toLowerCase().includes(country.toLowerCase())
       );
-      !!result.length && alert("Sorry, we can`t find this place, try again");
+      setResult(filteredHotels);
+      !filteredHotels && alert("Sorry, we can`t find this place, try again");
     }
   };
 
