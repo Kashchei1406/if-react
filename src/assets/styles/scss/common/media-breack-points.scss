@@ -1,0 +1,25 @@
+@use "variables" as var;
+@mixin desktop(){
+ @media screen and (max-width:var.$breakpoint-xxl){
+
+  @content
+ }
+}
+
+@mixin laptop(){
+ @media screen and (max-width:var.$breakpoint-xl){
+  @content
+ }
+}
+
+@mixin tablet(){
+ @media screen and (max-width:var.$breakpoint-lg){
+  @content
+ }
+}
+
+@mixin mobile(){
+ @media screen and (max-width:var.$breakpoint-sm){
+  @content
+ }
+}

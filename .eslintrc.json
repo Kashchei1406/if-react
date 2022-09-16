@@ -30,6 +30,8 @@
     "react/jsx-curly-brace-presence": "off",
     "react/jsx-filename-extension": [0],
     "react/prop-types": "off",
-    "newline-before-return": "off"
+    "newline-before-return": "off",
+    "no-unused-expressions": "off",
+    "no-alert": "off"
   }
 }

@@ -1,0 +1,14 @@
+@use "variables" as var;
+@use "extends" as *;
+
+@mixin font-normal($size: 18px, $color: var.$primary-text-color) {
+  @extend %font-normal;
+  color: $color;
+  font-size: $size;
+}
+
+@mixin font-bold($size: 18px, $color: var.$primary-text-color) {
+  @extend %font-bold;
+  color: $color;
+  font-size: $size;
+}

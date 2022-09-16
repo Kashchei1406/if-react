@@ -1,9 +1,15 @@
 import React from "react";
-import GuestsLove from "../Guests-love/Guests-love";
 import "../../assets/styles/scss/index.scss";
+import Header from "../Header/Header";
+import GuestsLove from "../GuestsLove/GuestsLove";
 
 function App() {
-  return <GuestsLove />;
+  return (
+    <>
+      <Header />
+      <GuestsLove />
+    </>
+  );
 }
 
 export default App;
