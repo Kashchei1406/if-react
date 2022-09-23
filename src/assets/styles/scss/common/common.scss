@@ -35,7 +35,7 @@ a {
   width: 100%;
 }
 
-.hide{
+.hide {
   display: none;
 }
 
@@ -48,4 +48,26 @@ select,
 h1,
 h2 {
   cursor: pointer;
+}
+
+.loader {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 10px solid var.$secondary-btn-color;
+  border-top: 10px solid var.$primary-color-blue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(50%, 50%);
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
