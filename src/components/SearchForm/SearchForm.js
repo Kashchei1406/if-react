@@ -10,7 +10,12 @@ function SearchForm({ getCountry }) {
   };
 
   return (
-    <form className="form col-12" id="main-form" method="GET">
+    <form
+      className="form col-12"
+      id="main-form"
+      method="GET"
+      onSubmit={(event) => searchCountry(event)}
+    >
       <div className="form__item form__item-hotel">
         <span className="form__label form__label-hotel">
           Your destination or hotel name
@@ -49,7 +54,7 @@ function SearchForm({ getCountry }) {
         </p>
       </div>
       <div className="form__btn-wrapper">
-        <button className="form__btn" type="button" onClick={searchCountry}>
+        <button className="form__btn" type="submit">
           Search
         </button>
       </div>

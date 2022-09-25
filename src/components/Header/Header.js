@@ -6,21 +6,44 @@ import googleApp from "../../assets/images/google.svg";
 import appStore from "../../assets/images/apple.svg";
 import SearchForm from "../SearchForm/SearchForm";
 import MainSection from "../MainSection/MainSection";
-import data from "../../assets/constants/data";
+import { searchUrl } from "../../assets/constants/api";
 
 function Header() {
-  const [result, setResult] = useState([]);
+  const [searchHotels, setSearchHotels] = useState({
+    hotels: [],
+    isLoaded: true,
+  });
 
-  const filterResult = (country) => {
+  const getHotels = async (country) => {
     if (country) {
-      const filteredHotels = data.filter(
-        (item) =>
-          item.country.toLowerCase().includes(country.toLowerCase()) ||
-          item.name.toLowerCase().includes(country.toLowerCase())
-      );
-      setResult(filteredHotels);
-      !filteredHotels && alert("Sorry, we can`t find this place, try again");
+      setSearchHotels({ ...searchHotels, isLoaded: false });
+
+      try {
+        const response = await fetch(`${searchUrl}${country}`);
+        const result = await response.json();
+
+        if (result.length) {
+          setSearchHotels({
+            ...searchHotels,
+            hotels: [...result],
+            isLoaded: true,
+          });
+        } else {
+          alert("Sorry we did not find any hotels, try again");
+          setSearchHotels({
+            ...searchHotels,
+            hotels: [],
+            isLoaded: true,
+          });
+        }
+      } catch (error) {
+        console.error(error);
+      }
+
+      return;
     }
+
+    alert("Fill out form");
   };
 
   return (
@@ -66,7 +89,7 @@ function Header() {
             <br />
             to live, work or just relax
           </h1>
-          <SearchForm getCountry={filterResult} />
+          <SearchForm getCountry={getHotels} />
           <div className="header__apps col-12">
             <div className="header__apps-item">
               <img src={googleApp} alt="Logo Google store" />
@@ -77,11 +100,12 @@ function Header() {
           </div>
         </Container>
       </header>
-      {!!result.length && (
+      {!!searchHotels.hotels.length && (
         <MainSection
           title="Available Hotel"
-          data={result}
           classes="available-hotels"
+          data={searchHotels.hotels}
+          isLoad={searchHotels.isLoaded}
         />
       )}
     </>
