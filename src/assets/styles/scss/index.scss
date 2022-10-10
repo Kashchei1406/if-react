@@ -183,19 +183,64 @@
   border: none;
 }
 
-.header__apps{
+.calendar {
+  max-width: 290px;
+  height: 272px;
+  width: 100%;
+  background-color: $primary-color-white;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar__head {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.calendar__btn {
+  background-color: $primary-color-white;
+  border: none;
+}
+
+.calendar__btn-img--prev {
+  transform: rotate(180deg);
+}
+
+.calendar__month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar__days,
+.calendar__date {
+  width: $calendar-item-width;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar__date:hover {
+  background-color: $secondary-text-color;
+}
+
+.header__apps {
   margin-top: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.header__apps-item{
+.header__apps-item {
   cursor: pointer;
   margin: 0 8px;
 }
 
-.available-hotels{
+.available-hotels {
   background-color: $primary-color-white;
 }
 
